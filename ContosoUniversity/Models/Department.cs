@@ -12,8 +12,15 @@ namespace ContosoUniversity.Models
         [StringLength(50, MinimumLength = 3)]
         public string Name { get; set; }
 
+        /*
+         **********************************
+            [Column(TypeName = "money")]
+            is SQL Server specific
+         **********************************
+        */
+        //[Column(TypeName = "money")]
+        
         [DataType(DataType.Currency)]
-        [Column(TypeName = "money")]
         public decimal Budget { get; set; }
 
         [DataType(DataType.Date)]
