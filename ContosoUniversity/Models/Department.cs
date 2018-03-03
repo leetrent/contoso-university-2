@@ -67,6 +67,15 @@ namespace ContosoUniversity.Models
          */
         public int? InstructorID { get; set; }
 
+        /*
+         ******************************************************** 
+            Used to detect concurrency conflicts
+         ********************************************************     
+         */
+        [Timestamp]
+        //public byte[] RowVersion { get; set; }
+        public DateTime RowVersion { get; set; }
+
         public Instructor Administrator { get; set; }
 
         /*
